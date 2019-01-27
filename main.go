@@ -1,14 +1,14 @@
 package main
 
-import (
-	"github.com/santiagobedoya/analisisDisenoSoftware/proyecto1/server"
-
-	"github.com/santiagobedoya/analisisDisenoSoftware/proyecto1/mac"
+import(
+	"proyectoanal/server"
+	"proyectoanal/mac"
+	"proyectoanal/idprocessor"
+	"proyectoanal/iduser"
 )
 
 func main() {
 
-	token := mac.GetMacAddr()
-
+	token := GetMacAddr()
 	server.CreateLocalHost(token)
 }
