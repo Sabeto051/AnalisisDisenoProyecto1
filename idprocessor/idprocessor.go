@@ -10,6 +10,7 @@ import (
 func GetProcessorID() (idprocessor string) {
 	temp := cpu.ProcessorFamily
 
-	idprocessor = strings.Replace(temp, " ", "", -1)
+	idprocessor = strings.Replace(temp, " ", "_", -1)
+	idprocessor = idprocessor[:40]
 	return
 }
