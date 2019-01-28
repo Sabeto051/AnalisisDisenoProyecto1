@@ -13,7 +13,7 @@ type Mensaje struct {
 }
 
 /* func handler(w http.ResponseWriter, r *http.Request) {
-	// librería io para convertir datos en bytes
+	// librería io para convertir  datos en bytes
 	io.WriteString(w, "Hola servidor Go\n")
 } */
 

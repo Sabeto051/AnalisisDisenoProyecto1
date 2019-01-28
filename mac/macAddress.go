@@ -8,7 +8,7 @@ import (
 // GetMacAddr retorna un string de la dirección Mac de la interfaz acitva
 func GetMacAddr() (mac string) { // puede devolver wired mac or wireless mac
 
-	// net.Interfaces() devuelve un Slice de tipo Interface de interfaces del equipo
+	// net.Interfaces() devuelve  un Slice de tipo Interface de interfaces del equipo
 	interfaces, err := net.Interfaces()
 
 	if err != nil {
