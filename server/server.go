@@ -8,7 +8,7 @@ import (
 // Mensaje ss
 type Mensaje struct {
 	MacAddress    string `json:"macAddress"`
-	IPprocesador  string `json:"ipProcesador"`
+	IDprocesador  string `json:"idProcesador"`
 	NombreUsuario string `json:"nombreUser"`
 }
 
@@ -18,10 +18,10 @@ type Mensaje struct {
 } */
 
 // CreateLocalHost crea un servidor local
-func CreateLocalHost(mac string) {
+func CreateLocalHost(mac string, idprocessor string, usr string) {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
-		mensaje := Mensaje{mac, "4488:123:lacolmena:Express", "santiagobedoya"}
+		mensaje := Mensaje{mac, idprocessor, usr}
 
 		json.NewEncoder(w).Encode(mensaje)
 	})
